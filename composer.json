@@ -18,7 +18,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "maknz/slack": "1.7.*",
+        "maknz/slack": "dev-master",
         "guzzlehttp/guzzle": "6.3.*"
     },
     "autoload": {
