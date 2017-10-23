@@ -1,6 +1,6 @@
 <?php
 
-namespace Maknz\Slack\Laravel;
+namespace SofWar\Slack\Laravel;
 
 use Maknz\Slack\Client as Client;
 use GuzzleHttp\Client as Guzzle;
@@ -14,7 +14,7 @@ class ServiceProviderLaravel4 extends \Illuminate\Support\ServiceProvider
      */
     public function boot()
     {
-        $this->package('maknz/slack-laravel', null, __DIR__);
+        $this->package('sofwar/slack-laravel', null, __DIR__);
     }
 
     /**
@@ -24,7 +24,7 @@ class ServiceProviderLaravel4 extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        $this->app['maknz.slack'] = $this->app->share(function ($app) {
+        $this->app['sofwar.slack'] = $this->app->share(function ($app) {
             $allow_markdown = $app['config']->get('slack::allow_markdown');
 
             $markdown_in_attachments = $app['config']->get('slack::markdown_in_attachments');
@@ -47,6 +47,6 @@ class ServiceProviderLaravel4 extends \Illuminate\Support\ServiceProvider
             );
         });
 
-        $this->app->bind('Maknz\Slack\Client', 'maknz.slack');
+        $this->app->bind('Maknz\Slack\Client', 'sofwar.slack');
     }
 }

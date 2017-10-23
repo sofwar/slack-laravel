@@ -1,21 +1,36 @@
 {
-    "name": "maknz/slack-laravel",
-    "description": "Laravel 4 and 5 integration for the maknz/slack package, including facades and service providers.",
-    "keywords": ["slack", "laravel"],
+    "name": "sofwar/slack-laravel",
+    "description": "Laravel 4 and 5 integration for the sofwar/slack package, including facades and service providers.",
+    "keywords": [
+        "slack",
+        "laravel"
+    ],
     "license": "BSD-2-Clause",
     "authors": [
         {
             "name": "maknz",
             "email": "github@mak.geek.nz"
+        },
+        {
+            "name": "sofwar",
+            "email": "ya.sofwar@yandex.com"
         }
     ],
     "require": {
         "php": ">=5.4.0",
-        "maknz/slack": "~1.0"
+        "maknz/slack": "1.7.*",
+        "guzzlehttp/guzzle": "6.3.*"
     },
     "autoload": {
         "psr-4": {
-            "Maknz\\Slack\\Laravel\\": "src/"
+            "SofWar\\Slack\\Laravel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SofWar\\Slack\\Laravel\\ServiceProviderLaravel5"
+            ]
         }
     },
     "minimum-stability": "stable"

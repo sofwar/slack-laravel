@@ -1,6 +1,6 @@
 # Slack for Laravel
 
-This package allows you to use [Slack for PHP](https://github.com/maknz/slack) easily and elegantly in your Laravel 4 or 5 app. Read the instructions below to get setup, and then head on over to [Slack for PHP](https://github.com/maknz/slack) for usage details. **Note: this package is no longer being actively maintained.**
+This package allows you to use [Slack for PHP](https://github.com/maknz/slack) easily and elegantly in your Laravel 4 or 5 app. Read the instructions below to get setup, and then head on over to [Slack for PHP](https://github.com/maknz/slack) for usage details.
 
 ## Requirements
 
@@ -18,11 +18,11 @@ Then [create an incoming webhook](https://my.slack.com/services/new/incoming-web
 
 ## Laravel 5
 
-Add the `Maknz\Slack\Laravel\ServiceProvider` provider to the `providers` array in `config/app.php`:
+Add the `SofWar\Slack\Laravel\ServiceProvider` provider to the `providers` array in `config/app.php`:
 
 ```php
 'providers' => [
-  Maknz\Slack\Laravel\ServiceProvider::class,
+  SofWar\Slack\Laravel\ServiceProvider::class,
 ],
 ```
 
@@ -31,7 +31,7 @@ Then add the facade to your `aliases` array:
 ```php
 'aliases' => [
   ...
-  'Slack' => Maknz\Slack\Laravel\Facade::class,
+  'Slack' => SofWar\Slack\Laravel\Facade::class,
 ],
 ```
 
@@ -39,12 +39,12 @@ Finally, publish the config file with `php artisan vendor:publish`. You'll find 
 
 ## Laravel 4
 
-Add the `Maknz\Slack\Laravel\ServiceProvider` provider to the `providers` array in `app/config.php`:
+Add the `SofWar\Slack\Laravel\ServiceProvider` provider to the `providers` array in `app/config.php`:
 
 ```php
 'providers' => [
   ...
-  'Maknz\Slack\Laravel\ServiceProvider',
+  'SofWar\Slack\Laravel\ServiceProvider',
 ],
 ```
 
@@ -53,7 +53,7 @@ Then add the facade to your `aliases` array:
 ```php
 'aliases' => [
   ...
-  'Slack' => 'Maknz\Slack\Laravel\Facade',
+  'Slack' => 'SofWar\Slack\Laravel\Facade',
 ],
 ```
 
