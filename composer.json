@@ -18,7 +18,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "maknz/slack": "dev-master",
+        "maknz/slack": "@dev-master",
         "guzzlehttp/guzzle": "6.3.*"
     },
     "autoload": {
@@ -35,5 +35,6 @@
                 "SofWar\\Slack\\Laravel\\ServiceProviderLaravel5"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
